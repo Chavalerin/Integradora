@@ -1,29 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Roboto+Slab:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&family=Sigmar&display=swap');
+
+:root{
+    /*bg color*/
+    --background: #02050e;
+    --primary: #1e50ff;
+    --secondary: #272d37;
+    --btn-bg: #050d26;
+    --bg-azul-10: #e9eeff;
+    --bg-white: #fff;
+    --bg-electric: #f0fbff;
+    --nav-bg: #0f1525;
+    /*text colors */
+    --text-gray: #adb9c7;
+    --text-white: #f3f4f6;
+
+    /*decoration*/
+    --fire: #ff6d00;
+    --electric: #64d3ff;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 /*header*/
 
 .header{
-    height: 80px;
+    height: 65px;
     width: 100%;
-    padding: 0px 50px;
+    padding: 0 30px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0;
-    background-color: white;
+    background-color: var(--secondary);
     z-index: 1;
 }
 
-.navbar {
+.navbar,
+.navbar-list {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    gap: 150px;
+}
+
+.navbar-list{
+    gap: 30px;
 }
 
 .navbar i{
@@ -31,12 +65,38 @@
     display: none;
 }
 
+.cart-logo{
+  border-radius: 10px;
+  height: 30px;
+  padding: 5px 10px;
+  margin-right: 1rem;
+  border: 2px solid rgb(3, 0, 0);
+  width: 40px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.logo-navbar{
+    cursor: pointer;
+}
 .navbar ul{
     display: flex;
     list-style: none;
-    gap: 100px
+    gap: 30px
 
 }
+.navbar-list a{
+    color: rgb(25, 180, 121);
+    font-size: 15px;
+    
+    
+}
+
+.navbar-list li:first-child>a{
+    color: var(--text-white);
+    font-weight: 960;
+}
+
 
 #toggle-menu{
     display: none;
@@ -55,29 +115,37 @@
 /*main*/
 
 main{
+    background-image: url("img/cerveza\ tirada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+    width: 100%;
+    height: 30%;
+    color: white;
+    gap: 50px;
+    }
 
 /*hero*/
 
 #hero {
     margin-top: 80px;
     display: flex;
+    flex-direction: row;
     padding: 70px 0px;
-    width: 90%;
+    max-width: 500px;
     justify-content: space-around;
-    background: green;
-
+    gap: 200px;
 }
 
 .hero-presentation{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
+    
 
 }
 
@@ -86,13 +154,15 @@ main{
     font-size: 40px;
     display: flex;
     flex-direction: column;
+    color: rgb(241, 3, 3);
+    border-color: rgb(255, 47, 47);
 }
 
 .hero-presentation p{
     font-weight: 300;
     font-size: 14px;
     max-width: 350px;
-    color: black;
+    color: greenyellow;
 }
 
 .button-container{
@@ -102,11 +172,11 @@ main{
 
 .button-container a{
     text-decoration: none;
-    border: 3px solid black;
+    border: 5px solid black;
     border-radius: 20px;
-    padding: 8px 15px;
-    font-size: 12px;
-    font-weight: 600;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 900%;
 
 }
 
@@ -122,7 +192,21 @@ main{
 
 .hero-img{
     width: 450px;
+    border-radius: 60%;
 }
+
+.hero-card{
+    width: 300px;
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+}
+
+
 
 /*about*/
 
@@ -130,11 +214,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     max-width: 850px;
     padding: 30px 0px;
     font-weight: 300;
     text-align: center;
+    gap: 50%;
 }
 
 /*Cards*/
@@ -146,41 +231,61 @@ flex-direction: column;
 text-align: center;
 gap: 30px;
 padding: 70px 0px;
-width: 95%;
+width: 100%;
 }
 
 .cards-container{
     display: flex;
     justify-content: center;
-    gap: 100px;
-    margin-top: 30px;
-flex-wrap: wrap;}
+    gap: 200px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    
+}
 
 .card{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 300px;
+    gap: 1%;
+    max-width: 250px;
+    align-items: center;
     }
 
 .card i{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .card h3{
     font-size: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 20%;
+}
+
+.card img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50px;
+    border-color: #02050e;
+    align-items: normal;
 }
 
 /*Contact*/
 
 #contact{
     display: flex;
-    padding: 70px 30px;
+    padding: 100px 100px;
     width: 100%;
     justify-content: space-around;
     color: white;
     flex-wrap: wrap;
     gap: 50px;
+    
+    
+    
+    
 }
 
 .info-container{
@@ -200,13 +305,19 @@ flex-wrap: wrap;}
 .info-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    justify-content: center;
 }
 
 .info-column h3{
     font-size: 24px;
+    text-align: justify;
 }
 
+.info-container h2 {
+    font-size: 24px;
+    text-align: justify;
+}
 .info-column p,
 .info-column a{
     display: flex;
@@ -216,7 +327,7 @@ flex-wrap: wrap;}
 
 .info-column a{
     text-decoration: none;
-    color: white;
+    color: rgb(245, 243, 243);
 }
 
 iframe {
@@ -228,6 +339,9 @@ iframe {
 
 .black-bg{
     background-color: black;
+    background-size: 100% 100%;
+    
+     
 }
 
 /*footer*/
@@ -251,6 +365,7 @@ footer{
         text-align: center;
         width: 90%;
         align-items: center;
+        background-color: #0b0000;
     }
 
 .hero-presentation h1{
@@ -273,13 +388,13 @@ footer{
     display: none;
 }
 #about{
-    font-size: 15px;
+    font-size: 50px;
 }
 }
 
 @media (max-width: 576px){
     .navbar ul {
-        background-color: white;
+       background-color: green;
         width: 100%;
         height: calc(100vh - 80px);
         position: absolute;
@@ -290,6 +405,8 @@ footer{
         justify-content: center;
         transform: translateX(200%);
         transition: all 0.04s ease-out;
+        background-size: 100% 100%;
+        
     }
     .navbar i {
         display: block;
@@ -297,8 +414,10 @@ footer{
 #toggle-menu:checked ~ .navbar-list{
     transform: translateX(0%);
     transition: all 0.04s ease-in;
+    
 }
    .hero-presentation p{
     max-width: 100%;
    }
 }
+

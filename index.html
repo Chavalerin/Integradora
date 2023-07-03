@@ -8,19 +8,25 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Bienvenidos a Dublin Pub</title>
+    <link rel="shortcut icon" href="img/logo nuevo dublin.png" type="image/x-icon">
 </head>
 <body>
 <header class="header" >
-    <img src="img/logo nuevo dublin.png" alt="logo de Dublin">
+    <img src="img/logo nuevo dublin.png"  alt="logo de Dublin" class="logo-navbar" >
     
     <nav class="navbar" >
         <label for="toggle-menu"><i class="fas fa-bars"></i></label>
         <input type="checkbox" id="toggle-menu">
         <ul class="navbar-list"> 
-            <li><a class="navbar-link" href="#hero">Inicio</a></li>
+            <li><a class="navbar-link" href="#hero">Home</a></li>
+            <li><a class="navbar-link" href="#cards-section">Productos</a></li>
             <li><a class="navbar-link" href="#about">Nosotros</a></li>
             <li><a class="navbar-link" href="#contact">Contactanos</a></li>
+            <li><a href="login.html">Incio sesion</a></li>
+            <li><a href="registro.html">Registro</a></li>
+           
         </ul>
+        <img src="img/cart-shopping-solid.svg" alt="cart logo" class="cart-logo">
     </nav>
 </header>
 
@@ -31,25 +37,28 @@
                 ¡Bienvenidos, <span>Soy tu Pub preferido!</span>
             </h1>
                 <p> 
-                Estamos encargados de que pases los mejores momentos en tu estadia en el lugar, 
-                con tecnologia de vanguardia, unica en su especie.
+                <b>Estamos encargados de que pases los mejores momentos en tu estadia en el lugar, 
+                con tecnologia de vanguardia, unica en su especie.</b>
                 </p>
                 <div class="button-container">
-                    <a href="#" class="primary-btn">Mas por Saber</a>
+                    <a href="#" class="primary-btn">Descargar App</a>
                     <a href="#" class="second-btn">Galeria</a>
                 </div>
              </div>
-             <img src="img/Dublin-Pub-exterior-listing.jpg" alt="imagen de presentacion" class="hero-img">
+             <img src="img/duendee.jpg" alt="imagen de presentacion" class="hero-img">
         </section>
         <section id="about">
             <p>
-                Lo que sucede en el bar se queda entre amigos, el ambiente que buscas con 
-                los mejores precios para tus bebidas favoritas, sobre todo la comodidad.
+                <b>¡Bienvenidos a Dublin Bar, donde la tradición irlandesa se encuentra con la innovación tecnológica!
+
+                    En nuestro pub bar, hemos fusionado la rica historia y el encanto de los pubs de Dublín con la última tecnología y la inteligencia artificial. Nuestro amigable bot de IA está aquí para ayudarte a explorar nuestro extenso menú de cervezas y licores, brindarte recomendaciones personalizadas y responder a todas tus preguntas con conocimiento y precisión.
+                    
+                    Nuestra pasión por la tecnología se refleja en cada aspecto de nuestra experiencia. Desde el momento en que entras, podrás disfrutar de una interfaz de vanguardia que te permite pedir y pagar tus bebidas de manera rápida y conveniente. Además, nuestro sistema de sonido de última generación te sumergirá en la música en vivo y en la atmósfera vibrante de nuestro local.</b>
             </p>
         </section>
         <section id="cards-section">
-            <h2>Soy tu inteligencia artificial donde interactuaremos en tu estadia</h2>
-            <p>Utilizame que el chatGpt quedo fuera de serie a la par mia, podremos ayudarte en lo que necesites, en cuanto me conozcas.</p>
+            <h2>Soy tu inteligencia artificial donde interactuaremos en tu estadia, optimizando tu pub bar con un Bot de IA: Cómo sacar el máximo provecho de la tecnología inteligente</h2>
+            <p><b>Utilizame que el chatGpt quedo fuera de serie a la par mia, podremos ayudarte en lo que necesites, en cuanto me conozcas.</b></p>
             <div class="cards-container">
                 <div class="card">
                     <i class="fas fa-location-dot"></i>
@@ -66,24 +75,51 @@
                         Aprende a programarme de forma facil y rapida.
                     </p>
                 </div>
-               
+              
                 <div class="card">
                     <i class="fas fa-ban" ></i>
                     <h3>Reglas</h3>
                     <p>
-                        Tene en cuenta a la hora de programarme hay reglas que debes cumplir.
+                     Tene en cuenta a la hora de programarme hay reglas que debes cumplir.
                         
                     </p>
                 </div>
             </div>
+            <section id="cards-section">
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="img/tragos.jpeg" alt="vasos de tragos">
+                        <h3>Tragos</h3>
+                        <p>
+                        Los mejores tragos en la actualidad    
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="img/canabis beer.png" alt="lata de cerveza canabis">
+                        <h3>Cervezas canabis</h3>
+                        <p>
+                            innovación en nuevos sabores y sensaciones.
+                        </p>
+                    </div>
+                  
+                    <div class="card">
+                        <img src="img/mejores-cervezas.jpg" alt="botellas de cerveza">
+                        <h3>Cervezas comerciales</h3>
+                        <p>
+                         Las mejores marcas en cervezas para compartir con amig@s.
+                            
+                        </p>
+                    </div>
+                </div>
         </section>
 
     <section id="contact" class="black-bg">
         <div class="info-container">
-            <h2>Llamame</h2>
+            <h2>Seguime</h2>
             <div class="contact-info-container">
             <div class="info-column">
-                <h3>La Nube</h3>
+                <h3>Contactos</h3>
                 <p><i class="fas fa-location-dot"></i>San Miguel de Tucuman</p>
                 <p><i class="fas fa-envelope"></i>dublin@dublin.com.ar</p>
                 <p><i class="fas fa-phone"></i>3815555565</p>
@@ -93,7 +129,6 @@
 
 
             <div class="info-column">
-                <h3>Todo Dublin</h3>
                 <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
                 <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
                 <a href="#"><i class="fa fa-globe"></i>Sitio Oficial</a>
@@ -105,10 +140,10 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>   
 
     </section>
-
+    
 
 </main>
-<footer class="black-bg">Hecho por Marcos A. Brizuela Todos Los Derechos Reservados</footer>
+<footer class="black-bg">Made by Marcos A. Brizuela for Nucba Team, Todos Los Derechos Reservados®2023</footer>
     
 </body>
 </html>
